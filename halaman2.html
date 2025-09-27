@@ -9,71 +9,147 @@
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       line-height: 1.7;
-      background: #fafafa;
       margin: 0;
+      padding: 0;
       color: #333;
     }
+
+    /* Header / Hero */
     header {
-      background: linear-gradient(135deg, #4facfe, #00f2fe);
+      background: linear-gradient(135deg, #f5576c, #f093fb);
       color: white;
-      padding: 20px;
+      padding: 80px 20px;
       text-align: center;
+      position: relative;
     }
-    header h1 { margin: 0; }
-    .container {
-      max-width: 900px;
-      margin: auto;
+    header .overlay {
+      background: rgba(255,255,255,0.85);
+      color: #2c3e50;
       padding: 20px;
+      display: inline-block;
+      border-radius: 10px;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+    header p {
+      margin: 10px 0 0;
+      font-size: 1.1rem;
+    }
+
+    /* Layout utama */
+    .main-content {
+      display: grid;
+      grid-template-columns: 3fr 1fr;
+      gap: 30px;
+      max-width: 1200px;
+      margin: auto;
+      padding: 40px 20px;
+      background: linear-gradient(135deg, #4facfe, #00f2fe);
+    }
+    article {
       background: white;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
     }
-    article h2 { margin-top: 2rem; color: #2c3e50; }
-    article p { margin: 1rem 0; }
-    .meta {
-      color: #777;
-      font-size: 0.9rem;
-      margin-bottom: 20px;
+    article h2 {
+      margin-top: 1.8rem;
+      color: #2c3e50;
     }
-    .cta {
+    article p, article li {
+      margin: 1rem 0;
+    }
+    article blockquote {
       background: #f6f8ff;
       border-left: 5px solid #4facfe;
+      margin: 20px 0;
+      padding: 15px 20px;
+      font-style: italic;
+    }
+
+    /* Sidebar */
+    aside {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    }
+    aside h3 {
+      margin-top: 0;
+      color: #2c3e50;
+    }
+    aside ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    aside li {
+      margin: 10px 0;
+    }
+    aside a {
+      text-decoration: none;
+      color: #4facfe;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+    aside a:hover {
+      color: #f5576c;
+    }
+
+    /* CTA box */
+    .cta {
+      background: #f6f8ff;
+      border-left: 5px solid #f093fb;
       padding: 20px;
       margin-top: 40px;
     }
+
+    /* Footer */
     footer {
       background: #2c3e50;
       color: white;
       text-align: center;
       padding: 20px;
-      margin-top: 40px;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .main-content {
+        grid-template-columns: 1fr;
+      }
+      aside {
+        margin-top: 20px;
+      }
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Bangkit Bersama</h1>
-    <p>Motivasi Hidup & Digital Growth</p>
+    <div class="overlay">
+      <h1>Bangkit Bersama</h1>
+      <p>Motivasi Hidup & Digital Growth</p>
+    </div>
   </header>
 
-  <div class="container">
+  <div class="main-content">
+    <!-- Artikel -->
     <article>
       <h1>Mengapa Instagram Masih Platform Terbaik untuk Membangun Otoritas di 2025</h1>
-      <div class="meta">Ditulis oleh Admin • 27 September 2025</div>
+      <p><em>Ditulis oleh Admin • 27 September 2025</em></p>
 
-      <p>Di tengah ramainya media sosial, banyak orang beranggapan TikTok atau YouTube adalah platform masa depan. Namun, kenyataannya, Instagram tetap menjadi <strong>platform utama</strong> untuk membangun kredibilitas dan otoritas di ranah digital. Mengapa demikian? Artikel ini akan mengupas alasan utama kenapa Instagram masih relevan, cara memanfaatkannya, serta tips membangun otoritas yang bertahan lama.</p>
+      <p>Di tengah ramainya media sosial, banyak orang beranggapan TikTok atau YouTube adalah platform masa depan...</p>
 
       <h2>Kombinasi Unik: Visual, Teks, Stories, dan DM</h2>
-      <p>Salah satu keunggulan Instagram adalah <strong>kombinasi antara konten visual, teks, stories, dan direct message (DM)</strong>. Tidak banyak platform yang bisa menyatukan elemen-elemen ini dengan efektif.</p>
-      <p><strong>Visual</strong>: Foto dan video yang menarik mampu memikat audiens dalam hitungan detik...</p>
-      <p><strong>Teks</strong>: Caption memberi ruang untuk berbagi cerita...</p>
-      <p><strong>Stories</strong>: Fitur ini memudahkan interaksi santai...</p>
-      <p><strong>DM</strong>: Pesan pribadi memungkinkan komunikasi satu lawan satu...</p>
+      <p>Salah satu keunggulan Instagram adalah <strong>kombinasi antara konten visual, teks, stories, dan direct message (DM)</strong>...</p>
 
       <h2>Instagram Sebagai “Kartu Nama Digital”</h2>
-      <p>Profil Instagram kini sering disebut sebagai <strong>kartu nama digital</strong>. Orang dapat menilai reputasi dan kredibilitas seseorang hanya dari profilnya...</p>
+      <p>Profil Instagram kini sering disebut sebagai <strong>kartu nama digital</strong>...</p>
 
       <h2>Niche yang Tumbuh Subur di Instagram</h2>
       <ul>
-        <li><strong>Fitness</strong>: Influencer dan pelatih membagikan tips latihan...</li>
+        <li><strong>Fitness</strong>: Influencer dan pelatih membagikan tips...</li>
         <li><strong>Kuliner</strong>: Food blogger atau usaha kecil bisa menampilkan...</li>
         <li><strong>Keuangan</strong>: Akun edukasi finansial membagikan tips...</li>
         <li><strong>Lifestyle & Self Improvement</strong>: Konten produktivitas, motivasi...</li>
@@ -87,13 +163,13 @@
         <li><strong>Optimalkan Profil</strong>: Gunakan foto profesional...</li>
         <li><strong>Konten Konsisten</strong>: Posting minimal 3–4 kali per minggu...</li>
         <li><strong>Tawarkan Nilai</strong>: Pastikan konten memberikan solusi...</li>
-        <li><strong>Engage dengan Audiens</strong>: Balas komentar, DM, polling stories...</li>
+        <li><strong>Engage dengan Audiens</strong>: Balas komentar, DM...</li>
         <li><strong>Gunakan Hashtag Strategis</strong>: Agar konten mudah ditemukan...</li>
-        <li><strong>Analisis Kinerja Konten</strong>: Gunakan insight untuk optimasi...</li>
+        <li><strong>Analisis Kinerja Konten</strong>: Gunakan insight...</li>
       </ol>
 
       <h2>Kesimpulan</h2>
-      <p>Instagram tetap menjadi <strong>platform terbaik untuk membangun otoritas</strong> di 2025 karena kemampuannya menggabungkan visual, teks, stories, dan komunikasi personal...</p>
+      <p>Instagram tetap menjadi <strong>platform terbaik untuk membangun otoritas</strong> di 2025...</p>
 
       <blockquote>
         “Jangan mengejar setiap platform baru. Fokus pada Instagram, bangun kredibilitas, dan konsisten membuat konten bernilai.”
@@ -102,9 +178,28 @@
       <div class="cta">
         <h3>Siap Membangun Otoritas di Instagram?</h3>
         <p>Mulailah sekarang. Optimalkan profilmu, konsisten posting, dan bangun engagement dengan audiens. Instagram adalah pintu gerbangmu menuju sukses digital.</p>
-        <p><a href="#" style="color:#4facfe;font-weight:bold;">➡ Mulai perjalananmu hari ini</a></p>
       </div>
     </article>
+
+    <!-- Sidebar -->
+    <aside>
+      <h3>Halaman Lain</h3>
+      <ul>
+        <li><a href="halaman2.html">Halaman 2</a></li>
+        <li><a href="halaman3.html">Halaman 3</a></li>
+        <li><a href="halaman4.html">Halaman 4</a></li>
+        <li><a href="halaman5.html">Halaman 5</a></li>
+        <li><a href="halaman6.html">Halaman 6</a></li>
+        <li><a href="halaman7.html">Halaman 7</a></li>
+        <li><a href="halaman8.html">Halaman 8</a></li>
+        <li><a href="halaman9.html">Halaman 9</a></li>
+        <li><a href="halaman10.html">Halaman 10</a></li>
+        <li><a href="halaman11.html">Halaman 11</a></li>
+        <li><a href="halaman12.html">Halaman 12</a></li>
+        <li><a href="halaman13.html">Halaman 13</a></li>
+        <li><a href="halaman14.html">Halaman 14</a></li>
+      </ul>
+    </aside>
   </div>
 
   <footer>
